@@ -1,19 +1,246 @@
+/* =========================
+   全局设置
+   ========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 "Microsoft YaHei", sans-serif;
+
+    background-color: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   顶部导航栏
+   ========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background-color: white;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #111827;
+}
+
+
+/* =========================
+   主体内容
+   ========================= */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+
+/* =========================
+   首页 Hero 区域
+   ========================= */
+
+main > section:first-child {
     text-align: center;
-    padding: 80px;
+    padding: 70px 20px;
 }
 
-h1 {
+main > section:first-child h2 {
     font-size: 48px;
+    margin-bottom: 20px;
 }
 
-p {
-    font-size: 24px;
+main > section:first-child p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+
+    font-size: 19px;
+    color: #6b7280;
 }
+
+
+/* =========================
+   按钮
+   ========================= */
 
 button {
-    padding: 12px 24px;
-    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+
+    padding: 12px 22px;
+
+    font-size: 16px;
+
     cursor: pointer;
+
+    background-color: #111827;
+    color: white;
+
+    transition: transform 0.2s,
+                box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Hero 区域里的按钮 */
+
+main > section:first-child button {
+    margin: 8px;
+}
+
+
+/* =========================
+   搭子分类
+   ========================= */
+
+main > section:nth-child(2) {
+    margin-top: 40px;
+}
+
+main > section:nth-child(2) h2,
+main > section:nth-child(3) h2 {
+    margin-bottom: 25px;
+
+    font-size: 28px;
+}
+
+
+/* 分类按钮容器 */
+
+main > section:nth-child(2) div {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+/* 分类按钮 */
+
+main > section:nth-child(2) button {
+    background-color: white;
+    color: #1f2937;
+
+    border: 1px solid #e5e7eb;
+
+    padding: 20px;
+}
+
+main > section:nth-child(2) button:hover {
+    background-color: #f9fafb;
+}
+
+
+/* =========================
+   搭子卡片
+   ========================= */
+
+main > section:nth-child(3) {
+    margin-top: 70px;
+}
+
+article {
+    background-color: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+article h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+article p {
+    color: #6b7280;
+    margin-bottom: 5px;
+}
+
+article button {
+    margin-top: 15px;
+}
+
+
+/* =========================
+   页脚
+   ========================= */
+
+footer {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   手机屏幕适配
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    main > section:first-child h2 {
+        font-size: 36px;
+    }
+
+    main > section:nth-child(2) div {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
