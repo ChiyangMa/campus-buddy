@@ -14,27 +14,44 @@
 
 </head>
 
+
 <body>
 
-    <!-- 网站顶部 -->
+
+    <!-- =========================
+         网站顶部导航
+         ========================= -->
 
     <header>
 
         <h1>Campus Buddy</h1>
 
         <nav>
+
             <a href="#">首页</a>
+
             <a href="#">找搭子</a>
+
             <a href="#">发布</a>
+
             <a href="#">我的</a>
+
         </nav>
 
     </header>
 
 
-    <!-- 首页主要内容 -->
+
+    <!-- =========================
+         网站主要内容
+         ========================= -->
 
     <main>
+
+
+        <!-- =========================
+             首页 Hero 区域
+             ========================= -->
 
         <section>
 
@@ -45,9 +62,11 @@
                 找到志同道合的校园伙伴。
             </p>
 
+
             <button id="findBuddyButton">
                 寻找搭子
             </button>
+
 
             <button id="createBuddyButton">
                 发布搭子
@@ -56,97 +75,290 @@
         </section>
 
 
-        <!-- 搭子分类 -->
+
+        <!-- =========================
+             搭子分类
+             ========================= -->
 
         <section>
 
             <h2>你想找什么搭子？</h2>
 
+
             <div>
 
-                <button class="category-button" data-category="all">
+
+                <!-- 查看全部 -->
+
+                <button
+                    class="category-button"
+                    data-category="all"
+                >
                     🔄 查看全部
                 </button>
 
-                <button class="category-button" data-category="food">
+
+                <!-- 饭搭子 -->
+
+                <button
+                    class="category-button"
+                    data-category="food"
+                >
                     🍜 饭搭子
                 </button>
 
-                <button class="category-button" data-category="sports">
+
+                <!-- 运动搭子 -->
+
+                <button
+                    class="category-button"
+                    data-category="sports"
+                >
                     🏸 运动搭子
                 </button>
 
-                <button class="category-button" data-category="study">
+
+                <!-- 学习搭子 -->
+
+                <button
+                    class="category-button"
+                    data-category="study"
+                >
                     📚 学习搭子
                 </button>
 
-                <button class="category-button" data-category="game">
+
+                <!-- 游戏搭子 -->
+
+                <button
+                    class="category-button"
+                    data-category="game"
+                >
                     🎮 游戏搭子
                 </button>
-                
-                <button class="category-button" data-category="entertainment">
+
+
+                <!-- 娱乐搭子 -->
+
+                <button
+                    class="category-button"
+                    data-category="entertainment"
+                >
                     🎬 娱乐搭子
                 </button>
-                
-                <button class="category-button" data-category="travel">
+
+
+                <!-- 旅行搭子 -->
+
+                <button
+                    class="category-button"
+                    data-category="travel"
+                >
                     ✈️ 旅行搭子
                 </button>
+
 
             </div>
 
         </section>
 
 
-        <!-- 搭子列表 -->
+
+        <!-- =========================
+             最新搭子
+             ========================= -->
 
         <section>
 
             <h2>最新搭子</h2>
 
-            <article class="buddy-card" data-category="sports">
 
-                <h3>🏸 周六羽毛球搭子</h3>
 
-                <p>地点：NTU</p>
+            <!-- =========================
+                 羽毛球搭子
+                 ========================= -->
 
-                <p>时间：周六 16:00</p>
+            <article
+                class="buddy-card"
 
-                <p>人数：2 / 4</p>
+                data-category="sports"
 
-                <button>我想加入</button>
+                data-title="周六羽毛球搭子"
+
+                data-location="NTU"
+
+                data-time="周六 16:00"
+
+                data-members="2 / 4"
+            >
+
+                <h3>
+                    🏸 周六羽毛球搭子
+                </h3>
+
+
+                <p>
+                    地点：NTU
+                </p>
+
+
+                <p>
+                    时间：周六 16:00
+                </p>
+
+
+                <p>
+                    人数：2 / 4
+                </p>
+
+
+                <button class="detail-button">
+                    查看详情
+                </button>
 
             </article>
 
 
-            <article class="buddy-card" data-category="food">
 
-                <h3>🍜 周五晚饭搭子</h3>
+            <!-- =========================
+                 晚饭搭子
+                 ========================= -->
 
-                <p>地点：学校附近</p>
+            <article
+                class="buddy-card"
 
-                <p>时间：周五 19:00</p>
+                data-category="food"
 
-                <p>人数：3 / 5</p>
+                data-title="周五晚饭搭子"
 
-                <button>我想加入</button>
+                data-location="学校附近"
+
+                data-time="周五 19:00"
+
+                data-members="3 / 5"
+            >
+
+                <h3>
+                    🍜 周五晚饭搭子
+                </h3>
+
+
+                <p>
+                    地点：学校附近
+                </p>
+
+
+                <p>
+                    时间：周五 19:00
+                </p>
+
+
+                <p>
+                    人数：3 / 5
+                </p>
+
+
+                <button class="detail-button">
+                    查看详情
+                </button>
 
             </article>
+
 
         </section>
+
 
     </main>
 
 
-    <!-- 网站底部 -->
+
+    <!-- =========================
+         搭子详情 Modal
+         ========================= -->
+
+    <div
+        id="buddyModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+
+            <!-- 关闭按钮 -->
+
+            <button
+                id="closeModal"
+                class="close-button"
+            >
+                ×
+            </button>
+
+
+            <!-- 搭子标题 -->
+
+            <h2 id="modalTitle">
+                搭子详情
+            </h2>
+
+
+            <!-- 地点 -->
+
+            <p id="modalLocation">
+            </p>
+
+
+            <!-- 时间 -->
+
+            <p id="modalTime">
+            </p>
+
+
+            <!-- 人数 -->
+
+            <p id="modalMembers">
+            </p>
+
+
+            <!-- 搭子介绍 -->
+
+            <p id="modalDescription">
+                欢迎加入，一起成为校园搭子！
+            </p>
+
+
+            <!-- 加入按钮 -->
+
+            <button id="joinButton">
+                我要加入
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         网站底部
+         ========================= -->
 
     <footer>
 
-        <p>© 2026 Campus Buddy</p>
+        <p>
+            © 2026 Campus Buddy
+        </p>
 
     </footer>
 
 
+
+    <!-- =========================
+         JavaScript
+         ========================= -->
+
     <script src="script.js"></script>
+
 
 </body>
 
